@@ -2,6 +2,8 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: chatbot-webhook-service
+  labels:
+    app: chatbot-webhook-service
 spec:
   replicas: 1
   selector:
@@ -15,11 +17,18 @@ spec:
       containers:
         - name: chatbot-webhook-service
           image: gabrielfull/chatbot-webhook-service:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 8000
+
           env:
             - name: DATABASE_URL
-              valueFrom:
-                secretKeyRef:
-                  name: chatbot-secrets
-                  key: DATABASE_URL
+              value: "postgresql://chatbot:Gabriel$2801@chatbot-postgres55330e6.ckvw8y0u20u6.us-east-1.rds.amazonaws.com:5432/chatbot_manager?sslmode=require"
+
+          resources:
+            requests:
+              memory: "128Mi"
+              cpu: "100m"
+            limits:
+              memory: "256Mi"
+              cpu: "250m"
