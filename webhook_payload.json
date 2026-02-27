@@ -1,0 +1,31 @@
+{
+  "isStatusReply": false,
+  "chatLid": "89533458727132@lid",
+  "connectedPhone": "5511976727615",
+  "waitingMessage": false,
+  "isEdit": false,
+  "isGroup": false,
+  "isNewsletter": false,
+  "instanceId": "3EF0974263B7E35F23B0E689F867F385",
+  "messageId": "3EB097A70381A617D75BAB",
+  "phone": "5511947172171",
+  "fromMe": false,
+  "momment": 1771645131000,
+  "status": "RECEIVED",
+  "chatName": "Gabriel",
+  "senderPhoto": null,
+  "senderName": "Gabriel",
+  "photo": "https://pps.whatsapp.net/v/t61.24694-24/546221852_1155694846462919_6994639993667280124_n.jpg?ccb=11-4&oh=01_Q5Aa3wF7s33Xd8ERJGC-QkyfkizsCnI7JXY_ERFmdRtpuQ3Uzw&oe=69A61CBF&_nc_sid=5e03e0&_nc_cat=102",
+  "broadcast": false,
+  "participantLid": null,
+  "forwarded": false,
+  "type": "ReceivedCallback",
+  "fromApi": false,
+  "text": {
+    "message": "top"
+  },
+  "_traceContext": {
+    "traceId": "bfd041a089dd96a350a404cd5ae51507",
+    "spanId": "08063e8967996911"
+  }
+}
