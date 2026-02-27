@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: chatbot-webhook-service
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: chatbot-webhook-service
+  template:
+    metadata:
+      labels:
+        app: chatbot-webhook-service
+    spec:
+      containers:
+        - name: chatbot-webhook-service
+          image: gabrielfull/chatbot-webhook-service:v1
+          ports:
+            - containerPort: 8000
+          env:
+            - name: DATABASE_URL
+              valueFrom:
+                secretKeyRef:
+                  name: chatbot-secrets
+                  key: DATABASE_URL
